@@ -1,0 +1,23 @@
+.nav {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.nav__menu > ul{
+    display: flex;
+    gap: 4rem;
+}
+.menu__links {
+    text-transform: uppercase;
+}
+
+.nav__search {
+    display: flex;
+    gap: 2rem;
+}
