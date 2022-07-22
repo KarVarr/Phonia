@@ -1,0 +1,20 @@
+.header {
+  margin: $p3;
+  background-color: $color-greenish;
+  border-radius: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+.header__info {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.info__title {
+  font-size: 5.8rem;
+}
+
+.info__subtitle {
+  font-size: 1.6rem;
+}

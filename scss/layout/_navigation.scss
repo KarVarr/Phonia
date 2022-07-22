@@ -1,23 +1,41 @@
 .nav {
-    padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: $p3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav__logo {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 4rem;
-    text-transform: uppercase;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  transition: transform 70s ease;
+  cursor: none;
+  &:hover {
+    transform: rotate(180deg);
+  }
 }
-.nav__menu > ul{
-    display: flex;
-    gap: 4rem;
+.nav__menu > ul {
+  display: flex;
+  gap: 3rem;
 }
 .menu__links {
-    text-transform: uppercase;
+  padding: 1rem;
+  text-transform: uppercase;
+  &:hover {
+    padding: 1rem;
+    background-color: $color-greenish;
+    border-radius: 20rem;
+    //box-shadow: 2px 5px 9px rgb(210, 209, 209);
+  }
 }
 
 .nav__search {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
+  img {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

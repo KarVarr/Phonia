@@ -67,7 +67,7 @@ menu {
 
 .title {
   font-family: "Readex Pro", sans-serif;
-  line-height: 1.5;
+  line-height: 1.3;
   font-size: 4.2rem;
 }
 
@@ -75,6 +75,172 @@ menu {
   font-family: "Inter", sans-serif;
   line-height: 1.3;
   font-size: 1.4rem;
+}
+
+.btn {
+  padding: 1.4rem 5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid #000;
+  border-radius: 20rem;
+  display: flex;
+  align-self: start;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.shop {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.5rem;
+}
+
+.shop__text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.text__subtitle {
+  padding: 0 40rem;
+}
+
+.shop__card {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.card__laptop {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.laptop__mac {
+  box-shadow: 0 14px 28px rgba(184, 184, 184, 0.817);
+  overflow: hidden;
+  padding: 0 4rem;
+}
+.laptop__mac:hover {
+  cursor: pointer;
+}
+.laptop__mac:hover img {
+  transform: scale(1.6);
+}
+.laptop__mac img {
+  padding-right: 5rem;
+  transition: all 1s ease-in;
+}
+
+.mac__text {
+  text-align: right;
+}
+.mac__text > h2 {
+  font-size: 3.2rem;
+}
+
+.laptop__belt {
+  box-shadow: 0 14px 28px rgba(184, 184, 184, 0.817);
+  overflow: hidden;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  gap: 4.6rem;
+}
+.laptop__belt:hover {
+  cursor: pointer;
+}
+.laptop__belt:hover img {
+  transform: scale(1.6);
+}
+.laptop__belt img {
+  width: 65%;
+  transition: all 1s ease-in;
+}
+
+.belt__text {
+  text-align: right;
+}
+.belt__text > h2 {
+  font-size: 3.2rem;
+}
+
+.card__phone {
+  box-shadow: 0 14px 28px rgba(184, 184, 184, 0.817);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4rem;
+}
+.card__phone:hover {
+  cursor: pointer;
+}
+.card__phone:hover img {
+  transform: scale(1.6);
+}
+.card__phone img {
+  padding-left: 1.6rem;
+  transition: all 1s ease-in;
+}
+
+.phone__text > h2 {
+  font-size: 3.2rem;
+}
+
+.card__tablet {
+  box-shadow: 0 14px 28px rgba(184, 184, 184, 0.817);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+}
+.card__tablet:hover {
+  cursor: pointer;
+}
+.card__tablet:hover img {
+  transform: scale(1.6);
+}
+.card__tablet img {
+  padding-bottom: 4rem;
+  transition: all 1s ease-in;
+}
+
+.tablet__text > h2 {
+  font-size: 3.2rem;
+}
+
+.header {
+  margin: 3rem 0;
+  background-color: #DCE5E2;
+  border-radius: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.header__info {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info__title {
+  font-size: 5.8rem;
+}
+
+.info__subtitle {
+  font-size: 1.6rem;
 }
 
 .nav {
@@ -88,18 +254,35 @@ menu {
   font-family: "Archivo Black", sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
+  transition: transform 70s ease;
+  cursor: none;
+}
+.nav__logo:hover {
+  transform: rotate(180deg);
 }
 
 .nav__menu > ul {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .menu__links {
+  padding: 1rem;
   text-transform: uppercase;
+}
+.menu__links:hover {
+  padding: 1rem;
+  background-color: #DCE5E2;
+  border-radius: 20rem;
 }
 
 .nav__search {
   display: flex;
   gap: 2rem;
+}
+.nav__search img {
+  cursor: pointer;
+}
+.nav__search img:hover {
+  transform: scale(1.1);
 }
