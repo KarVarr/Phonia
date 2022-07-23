@@ -1,4 +1,15 @@
 //MIXIN BTN
 .btn {
-    @include btn;
+  @include btn;
+}
+
+// SECTION IDEA
+.blog__btn {
+  padding: 2rem;
+  font-size: 2.4rem;
+  display: flex;
+  &:hover {
+    background-color: $color-greenish;
+    border-radius: 20rem;
+  }
 }

@@ -6,10 +6,7 @@
   gap: 5.5rem;
 }
 .shop__text {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  @include textCenter
 }
 
 .text__subtitle {

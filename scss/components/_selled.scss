@@ -4,15 +4,11 @@
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  cursor: pointer;
+  
   
 }
 .selled__text {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  @include textCenter
 }
 
 .selled__card {
@@ -28,6 +24,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  cursor: pointer;
   &:hover  {
     box-shadow: 0 14px 28px $color-shadow;
   }

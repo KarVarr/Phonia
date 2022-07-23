@@ -1,0 +1,26 @@
+.idea {
+  padding: $p3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+.idea__text {
+  @include textCenter;
+}
+
+.idea__blog {
+  display: flex;
+  gap: 3.5rem;
+}
+.blog__img {
+  max-width: 62rem;
+}
+.blog__text .subtitle {
+  font-size: 2.4rem;
+}
+.blog__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
