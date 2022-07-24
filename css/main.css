@@ -200,6 +200,69 @@ menu {
   gap: 2.8rem;
 }
 
+.look {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  align-items: center;
+  gap: 2rem;
+}
+
+.look__form {
+  padding: 0 2rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #C5C5C5;
+  border-radius: 10rem;
+}
+.look__form input {
+  border: none;
+  padding: 2rem 2rem;
+  outline: none;
+  color: #000;
+  font-size: 1.6rem;
+}
+.look__form ::-moz-placeholder {
+  font-size: 1.5rem;
+}
+.look__form :-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+.look__form ::placeholder {
+  font-size: 1.5rem;
+}
+
+.look__hashtag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hashtag__top {
+  display: flex;
+  gap: 1rem;
+}
+
+.top__btn,
+.buttom__btn {
+  padding: 1.4rem 2rem !important;
+  font-size: 1.4rem;
+}
+.top__btn:hover,
+.buttom__btn:hover {
+  background-color: #DCE5E2;
+  border: 1px solid #DCE5E2;
+  color: #000;
+}
+
+.hashtag__buttom {
+  display: flex;
+  gap: 1rem;
+}
+
 .selled {
   padding: 3rem 0;
   display: flex;
