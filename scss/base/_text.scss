@@ -1,7 +1,30 @@
 //MixinText
 .title {
-    @include title;
+  @include title;
 }
 .subtitle {
-    @include subtitle;
-}  
+  @include subtitle;
+}
+
+.text__subtitle {
+  padding: 0 40rem;
+  @include respond(tablet-land) {
+    padding: 0 20rem;
+  }
+  @include respond(tablet) {
+    padding: 0 10rem;
+  }
+  @include respond(phone) {
+    padding: 0 3rem;
+  }
+}
+
+//HEADER
+.info__title {
+  @include respond(phone) {
+    font-size: 3rem !important;
+  }
+}
+.info__subtitle {
+  font-size: 1.2rem !important;
+}

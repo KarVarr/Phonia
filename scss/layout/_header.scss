@@ -4,12 +4,26 @@
   border-radius: 3.2rem;
   display: flex;
   align-items: center;
+  @include respond (tablet-land) {
+    flex-direction: column;
+  } 
 }
 .header__info {
   padding: 5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  @include respond (tablet-land) {
+    text-align: center;
+  } 
+  @include respond(phone) {
+    padding: 2rem;
+  }
+}
+.info__btn {
+  @include respond (tablet-land) {
+   align-self: center;
+  } 
 }
 .info__title {
   font-size: 5.8rem;

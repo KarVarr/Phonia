@@ -3,18 +3,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   gap: 3rem;
 }
 .best__text {
-  @include textCenter
+  @include textCenter;
 }
 
 .best__card {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2.8rem;
+  @include respond(tablet-land) {
+    flex-wrap: wrap;
+  }
 }
 .card__product {
-  min-width: 41rem;
+  height: 45rem;
+  width: 41rem;
   padding: 4rem 0 1rem;
   background-color: $color-dark-white;
   border-radius: 1.6rem;

@@ -3,27 +3,45 @@
   padding: $p3;
   align-items: center;
   gap: 2rem;
+  @include respond(phone) {
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 }
 
 .look__form {
   padding: 0 2rem;
-  width: 50%;
+  width: 60%;
+  background-color: $color-dark-white;
   display: flex;
   align-items: center;
+  gap: 1rem;
   border: 1px solid $color-input-border;
   border-radius: 10rem;
-
-  input {
-    border: none;
-    padding: 2rem 2rem;
-    outline: none;
-    color: #000;
-    font-size: 1.6rem;
+  @include respond(tablet) {
+    width: 90%;
   }
-  ::placeholder {
-    font-size: 1.5rem;
+
+  #inputText {
+    padding: 2rem;
+    width: 150%;
+    background-color: $color-dark-white;
+    border: none;
+    font-size: 1.6rem;
+    outline: none;
+    @include respond(tablet) {
+      max-width: 100%;
+    }
+    @include respond(phone) {
+      padding: 1.5rem;
+      &::placeholder {
+        font-size: 1.1rem;
+      }
+    }
   }
 }
+
 .look__hashtag {
   @include flex;
   align-items: center;
@@ -38,6 +56,9 @@
 .buttom__btn {
   padding: 1.4rem 2rem !important;
   font-size: 1.4rem;
+  @include respond(phone) {
+    font-size: 1rem;
+  }
   &:hover {
     background-color: $color-greenish;
     border: 1px solid $color-greenish;

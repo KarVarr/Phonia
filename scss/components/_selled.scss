@@ -16,6 +16,9 @@
   align-items: center;
   justify-content: center;
   gap: 2.8rem;
+  @include respond (tablet){
+    flex-wrap: wrap;
+  }
   
 }
 .card__sale {

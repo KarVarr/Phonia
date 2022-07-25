@@ -20,6 +20,16 @@ p {
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -77,6 +87,35 @@ menu {
   font-size: 1.4rem;
 }
 
+.text__subtitle {
+  padding: 0 40rem;
+}
+@media only screen and (max-width: 75em) {
+  .text__subtitle {
+    padding: 0 20rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .text__subtitle {
+    padding: 0 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .text__subtitle {
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .info__title {
+    font-size: 3rem !important;
+  }
+}
+
+.info__subtitle {
+  font-size: 1.2rem !important;
+}
+
 .btn {
   padding: 1.4rem 5rem;
   font-family: "Inter", sans-serif;
@@ -86,6 +125,11 @@ menu {
   display: flex;
   align-self: start;
   text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .btn {
+    font-size: 1.2rem;
+  }
 }
 .btn:hover {
   background-color: #000;
@@ -119,11 +163,19 @@ menu {
 
 .best__card {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2.8rem;
+}
+@media only screen and (max-width: 75em) {
+  .best__card {
+    flex-wrap: wrap;
+  }
 }
 
 .card__product {
-  min-width: 41rem;
+  height: 45rem;
+  width: 41rem;
   padding: 4rem 0 1rem;
   background-color: #F8F9FA;
   border-radius: 1.6rem;
@@ -173,17 +225,22 @@ menu {
   align-items: center;
   gap: 6rem;
 }
-
-.idea__text {
+.idea .idea__text {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
-.idea__blog {
+.idea .idea__blog {
   display: flex;
+  align-items: center;
   gap: 3.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .idea .idea__blog {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .blog__img {
@@ -207,30 +264,55 @@ menu {
   align-items: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .look {
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}
 
 .look__form {
   padding: 0 2rem;
-  width: 50%;
+  width: 60%;
+  background-color: #F8F9FA;
   display: flex;
   align-items: center;
+  gap: 1rem;
   border: 1px solid #C5C5C5;
   border-radius: 10rem;
 }
-.look__form input {
+@media only screen and (max-width: 56.25em) {
+  .look__form {
+    width: 90%;
+  }
+}
+.look__form #inputText {
+  padding: 2rem;
+  width: 150%;
+  background-color: #F8F9FA;
   border: none;
-  padding: 2rem 2rem;
-  outline: none;
-  color: #000;
   font-size: 1.6rem;
+  outline: none;
 }
-.look__form ::-moz-placeholder {
-  font-size: 1.5rem;
+@media only screen and (max-width: 56.25em) {
+  .look__form #inputText {
+    max-width: 100%;
+  }
 }
-.look__form :-ms-input-placeholder {
-  font-size: 1.5rem;
-}
-.look__form ::placeholder {
-  font-size: 1.5rem;
+@media only screen and (max-width: 37.5em) {
+  .look__form #inputText {
+    padding: 1.5rem;
+  }
+  .look__form #inputText::-moz-placeholder {
+    font-size: 1.1rem;
+  }
+  .look__form #inputText:-ms-input-placeholder {
+    font-size: 1.1rem;
+  }
+  .look__form #inputText::placeholder {
+    font-size: 1.1rem;
+  }
 }
 
 .look__hashtag {
@@ -250,6 +332,12 @@ menu {
 .buttom__btn {
   padding: 1.4rem 2rem !important;
   font-size: 1.4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .top__btn,
+.buttom__btn {
+    font-size: 1rem;
+  }
 }
 .top__btn:hover,
 .buttom__btn:hover {
@@ -283,6 +371,11 @@ menu {
   align-items: center;
   justify-content: center;
   gap: 2.8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .selled__card {
+    flex-wrap: wrap;
+  }
 }
 
 .card__sale {
@@ -341,13 +434,14 @@ menu {
   gap: 2rem;
 }
 
-.text__subtitle {
-  padding: 0 40rem;
-}
-
 .shop__card {
   display: flex;
   gap: 1.6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .shop__card {
+    flex-direction: column;
+  }
 }
 
 .card__laptop {
@@ -366,6 +460,11 @@ menu {
 }
 .laptop__mac:hover img {
   transform: scale(1.6);
+}
+@media only screen and (max-width: 37.5em) {
+  .laptop__mac {
+    padding-bottom: 1rem;
+  }
 }
 .laptop__mac img {
   padding-right: 5rem;
@@ -393,6 +492,13 @@ menu {
 .laptop__belt:hover img {
   transform: scale(1.6);
 }
+@media only screen and (max-width: 37.5em) {
+  .laptop__belt {
+    gap: 1rem;
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+}
 .laptop__belt img {
   width: 65%;
   transition: transform 2s ease-in;
@@ -400,6 +506,15 @@ menu {
 
 .belt__text {
   text-align: right;
+}
+@media only screen and (max-width: 37.5em) {
+  .belt__text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    padding-left: 3rem;
+  }
 }
 .belt__text > h2 {
   font-size: 3.2rem;
@@ -420,6 +535,11 @@ menu {
 }
 .card__phone:hover img {
   transform: scale(1.6);
+}
+@media only screen and (max-width: 37.5em) {
+  .card__phone {
+    padding-bottom: 1rem;
+  }
 }
 .card__phone img {
   padding-left: 1.6rem;
@@ -444,6 +564,11 @@ menu {
 }
 .card__tablet:hover img {
   transform: scale(1.6);
+}
+@media only screen and (max-width: 37.5em) {
+  .card__tablet {
+    padding-top: 1rem;
+  }
 }
 .card__tablet img {
   padding-bottom: 4rem;
@@ -472,8 +597,9 @@ menu {
   flex-direction: column;
   gap: 1rem;
 }
-.thing__text > p {
-  padding: 0;
+.thing__text > p,
+.thing__text h2 {
+  padding: 0 1rem;
 }
 
 .thing__img {
@@ -487,12 +613,23 @@ menu {
   display: flex;
   align-items: center;
 }
-.thing__form input {
+@media only screen and (max-width: 37.5em) {
+  .thing__form {
+    max-width: 90%;
+  }
+}
+.thing__form #email {
   padding: 1.4rem;
   border: none;
   background-color: #DCE5E2;
   font-size: 1.5rem;
   outline: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .thing__form #email {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
 .form__btn {
@@ -509,15 +646,48 @@ menu {
   border-top: 1px solid #DCE5E2;
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .footer__about {
-  max-width: 30rem;
+  max-width: 24rem;
+}
+@media only screen and (max-width: 75em) {
+  .footer__about {
+    max-width: 20rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__about {
+    text-align: center;
+  }
 }
 
 .about__menu {
   display: flex;
-  gap: 10rem;
+  gap: 9rem;
+}
+@media only screen and (max-width: 75em) {
+  .about__menu {
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about__menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+  }
 }
 
 .menu__section {
@@ -540,12 +710,33 @@ menu {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 75em) {
+  .header {
+    flex-direction: column;
+  }
+}
 
 .header__info {
   padding: 5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+@media only screen and (max-width: 75em) {
+  .header__info {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__info {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .info__btn {
+    align-self: center;
+  }
 }
 
 .info__title {
