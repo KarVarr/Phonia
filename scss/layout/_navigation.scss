@@ -22,7 +22,8 @@
 ul {
   display: flex;
   gap: 3rem;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   @include respond(tablet) {
     background-color: $color-dark-white;
     width: 100%;
@@ -64,6 +65,22 @@ ul {
   }
 }
 
+.bin {
+  position: relative;
+  &::before {
+    content: '1';
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: $color-push;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.7rem;
+    display: grid;
+    place-items: center;
+  }
+}
+
 //SECTION
 #select {
   border: none;
@@ -72,17 +89,22 @@ ul {
 }
 
 //BURGER MUNU
-
+.burger__menu {
+  display: none;
+}
 @include respond(tablet) {
   .burger__menu {
+    display: none;
     z-index: 10;
   }
-  .line {
+  .bar {
+    display: inline-block;
     width: 4rem;
     height: 0.5rem;
     background-color: #000;
     position: relative;
     left: 1rem;
+
     &::after,
     &::before {
       content: '';
@@ -92,10 +114,26 @@ ul {
       position: absolute;
       top: 1rem;
       left: 0;
+      -webkit-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
     }
     &::after {
       top: -1rem;
       left: 0;
     }
+  }
+
+  .menu__ul.active ~ .bar::after {
+    content: '';
+    background-color: $color-greenish;
+    transform: translateY(1rem) rotate(225deg);
+  }
+  .menu__ul.active ~ .bar::before {
+    content: '';
+    background-color: $color-greenish;
+    transform: translateY(-1rem) rotate(-225deg);
+  }
+  .menu__ul.active ~ .bar {
+    background-color: transparent;
   }
 }

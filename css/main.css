@@ -147,7 +147,7 @@ menu {
   display: flex;
 }
 .blog__btn:hover {
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   border-radius: 20rem;
 }
 
@@ -182,7 +182,7 @@ menu {
   height: 45rem;
   width: 41rem;
   padding: 4rem 0 1rem;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   border-radius: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -280,11 +280,11 @@ menu {
 .look__form {
   padding: 0 2rem;
   width: 60%;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   display: flex;
   align-items: center;
   gap: 1rem;
-  border: 1px solid #C5C5C5;
+  border: 1px solid #c5c5c5;
   border-radius: 10rem;
 }
 @media only screen and (max-width: 56.25em) {
@@ -295,7 +295,7 @@ menu {
 .look__form #inputText {
   padding: 2rem;
   width: 150%;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
   border: none;
   font-size: 1.6rem;
   outline: none;
@@ -346,8 +346,8 @@ menu {
 }
 .top__btn:hover,
 .buttom__btn:hover {
-  background-color: #DCE5E2;
-  border: 1px solid #DCE5E2;
+  background-color: #dce5e2;
+  border: 1px solid #dce5e2;
   color: #000;
 }
 
@@ -395,7 +395,7 @@ menu {
   box-shadow: 0 14px 28px rgba(184, 184, 184, 0.817);
 }
 .card__sale:hover .sale__text--price {
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   border-radius: 20rem;
 }
 
@@ -592,7 +592,7 @@ menu {
   align-items: center;
   gap: 2rem;
   max-width: 93.5rem;
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   border-radius: 1.6rem;
 }
 
@@ -626,7 +626,7 @@ menu {
 .thing__form #email {
   padding: 1.4rem;
   border: none;
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   font-size: 1.5rem;
   outline: none;
 }
@@ -641,14 +641,14 @@ menu {
   padding: 1.4rem 3rem;
   border: none;
   border-radius: 0 5.4rem 5.4rem 0;
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   cursor: pointer;
 }
 
 .footer {
   padding: 3rem 7rem;
-  background-color: #F8F9FA;
-  border-top: 1px solid #DCE5E2;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dce5e2;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -710,7 +710,7 @@ menu {
 
 .header {
   margin: 3rem 0;
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   border-radius: 3.2rem;
   display: flex;
   align-items: center;
@@ -780,11 +780,11 @@ menu {
 ul {
   display: flex;
   gap: 3rem;
-  transition: all 0.6s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 @media only screen and (max-width: 56.25em) {
   ul {
-    background-color: #F8F9FA;
+    background-color: #f8f9fa;
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -807,7 +807,7 @@ ul {
 }
 .menu__links:hover {
   padding: 1rem;
-  background-color: #DCE5E2;
+  background-color: #dce5e2;
   border-radius: 20rem;
 }
 
@@ -827,24 +827,46 @@ ul {
   transform: scale(1.1);
 }
 
+.bin {
+  position: relative;
+}
+.bin::before {
+  content: "1";
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-color: hotpink;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.7rem;
+  display: grid;
+  place-items: center;
+}
+
 #select {
   border: none;
   text-transform: uppercase;
   outline: none;
 }
 
+.burger__menu {
+  display: none;
+}
+
 @media only screen and (max-width: 56.25em) {
   .burger__menu {
+    display: none;
     z-index: 10;
   }
-  .line {
+  .bar {
+    display: inline-block;
     width: 4rem;
     height: 0.5rem;
     background-color: #000;
     position: relative;
     left: 1rem;
   }
-  .line::after, .line::before {
+  .bar::after, .bar::before {
     content: "";
     width: 4rem;
     height: 0.5rem;
@@ -852,9 +874,23 @@ ul {
     position: absolute;
     top: 1rem;
     left: 0;
+    transition: all 1s ease-in-out;
   }
-  .line::after {
+  .bar::after {
     top: -1rem;
     left: 0;
+  }
+  .menu__ul.active ~ .bar::after {
+    content: "";
+    background-color: #dce5e2;
+    transform: translateY(1rem) rotate(225deg);
+  }
+  .menu__ul.active ~ .bar::before {
+    content: "";
+    background-color: #dce5e2;
+    transform: translateY(-1rem) rotate(-225deg);
+  }
+  .menu__ul.active ~ .bar {
+    background-color: transparent;
   }
 }

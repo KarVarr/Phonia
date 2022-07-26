@@ -1,7 +1,9 @@
-const burgerMenuBtn = document.querySelector('.burger__menu');
+const burgerMenuBtn = document.querySelector('.bar');
 const menu = document.querySelector('.menu__ul');
 
 burgerMenuBtn.addEventListener('click', e => {
   e.preventDefault();
-  menu.classList.toggle('active');
+  if (!burgerMenuBtn.checked) {
+    menu.classList.toggle('active');
+  }
 });
