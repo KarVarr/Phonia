@@ -24,7 +24,6 @@ html {
   @include respond(tablet) {
     font-size: 50%;
   }
-  
 }
 
 // INPUT
@@ -69,4 +68,7 @@ menu {
   max-width: 144rem;
   margin: 0 auto;
   padding: 0 7rem;
+  @include respond(phone) {
+    padding: 0 3rem;
+  }
 }
