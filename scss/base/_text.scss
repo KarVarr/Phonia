@@ -22,7 +22,7 @@
 //HEADER
 .info__title {
   @include respond(phone) {
-    font-size: 3rem !important;
+    font-size: 4rem !important;
   }
 }
 .info__subtitle {

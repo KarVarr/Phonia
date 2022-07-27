@@ -4,11 +4,9 @@
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  
-  
 }
 .selled__text {
-  @include textCenter
+  @include textCenter;
 }
 
 .selled__card {
@@ -16,19 +14,22 @@
   align-items: center;
   justify-content: center;
   gap: 2.8rem;
-  @include respond (tablet){
+  @include respond(tablet) {
     flex-wrap: wrap;
   }
-  
 }
 .card__sale {
-    padding: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   cursor: pointer;
-  &:hover  {
+  @include respond(phone) {
+    box-shadow: 3px 5px 2px rgba(128, 128, 128, 0.593);
+    border-radius: 1rem;
+  }
+  &:hover {
     box-shadow: 0 14px 28px $color-shadow;
   }
   &:hover .sale__text--price {
@@ -37,11 +38,11 @@
   }
 }
 .sale__img {
-    overflow: hidden;
-    transition: $transition-img;
-    &:hover {
-        transform: scale(1.5);
-    }
+  overflow: hidden;
+  transition: $transition-img;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 .sale__text {
@@ -54,9 +55,8 @@
 }
 
 .sale__text--price {
-    padding: 1rem;
+  padding: 1rem;
   font-size: 1.8rem;
   display: flex;
-    align-self: start;
-
+  align-self: start;
 }
